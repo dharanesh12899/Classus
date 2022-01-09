@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="mediaexcss.css">
+    <title>AJAX/Express Example</title>
+
+    <script>
+        $('document').ready(() => {
+            $("#sub").click(function() {
+                $.ajax({
+                    url: "http://localhost:7771/ex",
+                    type: 'post',
+                    data: $('form').serialize(),
+                }).done(function(data) {
+                    len = data.length;
+                    apps = len;
+                    var i = 0;
+                    while (i < len) {
+                        if (apps >= 3) {
+                            $("#hi").append("<div class='container-flush row'><div class='col-md-4'><div class='imgbox'><embed src='" + data[i].path + "' alt='No'><div class='type'>Type:" + data[i].type + "</div><div class='size'>Size:" + data[i].size + " mb</div><a href='" + data[i].path + "' download>Download</a></div></div><div class='col-md-4'><div class=' imgbox'><embed src='" + data[i + 1].path + "' alt='No'><div class='type'>Type:" + data[i + 1].type + "</div><div class='size'>Size:" + data[i + 1].size + " mb</div><a href='" + data[i + 1].path + "' download>Download</a></div></div><div class='col-md-4'><div class=' imgbox'><embed src='" + data[i + 2].path + "' alt='No'><div class='type'>Type:" + data[i + 2].type + "</div><div class='size'>Size:" + data[i + 2].size + " mb</div><a href='" + data[i + 2].path + "' download>Download</a></div></div></div><br>");
+                            i += 3;
+                        } else if (apps == 2) {
+                            $("#hi").append("<div class='container-flush row'><div class='col-md-4'><div class='imgbox'><embed src='" + data[i].path + "' alt='No'><div class='type'>Type:" + data[i].type + "</div><div class='size'>Size:" + data[i].size + " mb</div><a href='" + data[i].path + "' download>Download</a></div></div><div class='col-md-4'><div class=' imgbox'><embed src='" + data[i + 1].path + "' alt='No'><div class='type'>Type:" + data[i + 1].type + "</div><div class='size'>Size:" + data[i + 1].size + " mb</div><a href='" + data[i + 1].path + "' download>Download</a></div></div></div><br>");
+                            i += 2;
+                        } else if (apps == 1) {
+                            alert("hi3");
+                            $("#hi").append("<div class='container-flush row'><div class='col-md-4'><div class='imgbox'><embed src='" + data[i].path + "' alt='No'><div class='type'>Type:" + data[i].type + "</div><div class='size'>Size:" + data[i].size + " mb</div><a href='" + data[i].path + "' download>Download</a></div></div></div><br>");
+                            i += 1;
+                        }
+                        apps -= 3;
+                    }
+                });
+
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <button class="btn btn-danger" id="sub">Submit</button>
+        <br><br>
+        <div id="hi"></div>
+    </div>
+</body>
+
+</html>

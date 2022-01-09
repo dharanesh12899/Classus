@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src=""></script>
+
+    <title>Teacher Login</title>
+
+    <style>
+       body
+       {
+          background-size: cover;
+          margin: 0;
+       }
+       .box
+       {
+          background-color: white;
+          width: 500px;
+          float:right;
+          height: 665px;
+          overflow: hidden;
+       }
+       .box2
+       {
+         margin-top: 220px;
+         width:300px;
+       }
+            
+       .inb
+       {
+         border-top: 0px;
+         border-left: 0px;
+         border-right: 0px;
+         border-bottom: 1px solid black;
+         width: 320px;
+         background: none;
+         position: absolute;
+         margin-top: 0px;
+         border-radius: 0px;
+       }
+       .inb1
+       {
+         border-top: 0px;
+         border-left: 0px;
+         border-right: 0px;
+         border-bottom: 1px solid black;
+         width: 320px;
+         background: none;
+         position: absolute;
+         margin-top:50px;
+         border-radius: 0px;
+       }
+       .inb:focus
+       {
+         border-top: 0px;
+         border-left: 0px;
+         border-right: 0px;
+         border-bottom: 1px solid black;
+         width: 320px;
+         background: none;
+         box-shadow: none;
+       }
+       .inb1:focus
+       {
+         border-top: 0px;
+         border-left: 0px;
+         border-right: 0px;
+         border-bottom: 1px solid black;
+         width: 320px;
+         background: none;
+         box-shadow: none;
+       }
+       
+       .btn
+       {
+         width:200px;
+         position: relative;
+         top:100px;
+         margin-left: 60px;
+         background-color: #FF8C00;
+         color: white;
+       }
+       .lab
+       {
+          position: absolute;
+          margin-top: 10px;
+       }
+       .lab1
+       { 
+          position: absolute;
+          margin-top: 60px;
+       }
+      
+       @media (max-width: 576px) { 
+          body
+          {
+             background-repeat: no-repeat;
+          }
+          .box
+          {
+             background-image: url('tb5.jpg');
+             background-size: cover;
+             width: 400px;
+             
+          }
+          .box2
+          {
+            margin-left: 45px;
+          }
+          .btn
+          {
+            margin-left: 50px;
+          }
+          .inb
+         {
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            border-bottom: 1px solid black;
+            width: 300px;
+            background: none;
+            position: absolute;
+            margin-top: 0px;
+            border-radius: 0px;
+         }
+         .inb1
+         {
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            border-bottom: 1px solid black;
+            width: 300px;
+            background: none;
+            position: absolute;
+            margin-top:50px;
+            border-radius: 0px;
+         }
+         .inb:focus
+         {
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            border-bottom: 1px solid black;
+            width: 300px;
+            background: none;
+            box-shadow: none;
+         }
+         .inb1:focus
+         {
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            border-bottom: 1px solid black;
+            width: 300px;
+            background: none;
+            box-shadow: none;
+         }
+          
+       }
+    </style>
+    <script>
+       function moveup()
+       {
+         document.getElementById('l1').style.marginTop = "-13px";
+         document.getElementById('l1').style.color = "#FF8C00";
+       }
+       function moveup1()
+       {
+         document.getElementById('l2').style.marginTop = '37px';
+         document.getElementById('l2').style.color = "#FF8C00";
+       }
+       function movedown()
+       {
+          var g = document.getElementById('em').value;
+          if(g=="")
+          {
+            document.getElementById('l1').style.marginTop = "10px";
+            document.getElementById('l1').style.color = "black";
+          }
+          if(g!="")
+          {
+            document.getElementById('l1').style.color = "black";
+          }
+       }
+       function movedown1()
+       {
+          var g = document.getElementById('pass').value;
+          if(g=="")
+          {
+            document.getElementById('l2').style.marginTop = "60px";
+            document.getElementById('l2').style.color = "black";
+          }
+          if(g!="")
+          {
+            document.getElementById('l1').style.color = "black";
+          }
+       }
+    </script>
+
+  </head>
+  <body style="background-image: url('tb5.jpg');">
+     <div class="container box">
+        <div class="container box2" >
+            <h3 id="top">Teacher Login</h3>
+            <form action="" method="post">         
+              <div class="form-group">
+                 <input type="text" class="form-control inb" id="em" name="" onfocus="moveup()" onblur="movedown()" >
+                 <label for="em" class="lab" id="l1">Email</label>
+              </div> 
+              <div class="form-group">
+               <input type="text" class="form-control inb1" id="pass" name="" onfocus="moveup1()" onblur="movedown1()" >
+               <label for="pass" class="lab1" id="l2">Password</label>
+            </div> 
+               <button type="submit" class="btn mt-3 mb-4">Login</button>
+            </form>
+        </div>
+     </div>
+  </body>
+</html>

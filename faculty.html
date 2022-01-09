@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Faculty Home</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="facultycss.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="facultyjs.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/098ee03ef1.js"></script>
+</head>
+
+<body>
+    <div class="container-flush">
+        <div class=" back-face shadow container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="message-box shadow container-flush">
+                        <p>
+                            <h5>Send messages to your class or to the whole department</h5>
+                        </p>
+                        <form class="form-group">
+                            <input type="hidden" id="msg" name="msgsend">
+                            <div contenteditable="true" class="edit">
+                            </div>
+                            </input>
+                            <button id="next" type="button" class="btn btn-primary btn-md">Next</button>
+                            <div id="error"></div>
+                            <div id="selection-msg" style="display: none">
+                                <br>
+                                <div class="btn-group btn-group-sm" data-toggle="buttons">
+                                    <label class="btn  btn-primary">
+                                        <input type="radio"  name="typeofsend" id="sdep" value="Whole Department">Whole Department</button>
+                                    </label>
+                                    <label class="btn  btn-primary">
+                                        <input type="radio"  name="typeofsend" id="scl" value="Specific Class">Specific Class</button>
+                                    </label>
+                                    <label class="btn  btn-primary">
+                                        <input type="radio"  name="typeofsend" id="syr" value="Specific Year"> Specific Year</button>
+                                    </label>
+                                </div>
+                                <div id="spfcls" style="display: none">
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <label><b>Branch:</b></label><br>
+                                            <select id="spfbr" class="custom-select" name="brtosnd">
+                                                    <option selected>Branch</option>
+                                                    <option value="CSE">CSE</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-4">
+                                            <label><b>Year:</b></label><br>
+                                            <select id="spfyr" class="custom-select" name="yeartosend">
+                                                <option selected>Year</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-4">
+                                            <label><b>Section:</b></label><br>
+                                            <select id="spfsc" class="custom-select" name="clstosnd">
+                                                <option selected>Section</option>
+                                                <option value="A">A</option>
+                                                <option value="B">B</option>
+                                                <option value="C">C</option>
+                                                <option value="D">D</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="spfdep" style="display: none;">
+                                    <br>
+                                    <label><b>Branch:</b></label><br>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <select id="bran" class="custom-select col-10" name="whbr">
+                                                <option selected>Select Branch</option>
+                                            <option value="CSE">CSE</option>
+                                        </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="spfyear" style="display: none;">
+                                    <br>
+                                    <label><b>Year:</b></label>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <select id="year" class="custom-select col-10" name="wholeyr">
+                                                <option selected>Select Year</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                        </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br><br>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <button type="button" class="btn btn-outline-success" id="send">Send</button>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <button type="button" class="btn btn-outline-danger" id="cancel">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="alert alert-success alert-dismissible fade show" style="display: none;" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <strong>Message Sent Successfully!</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <form id="filess" enctype="multipart/form-data">
+                        <div class="message-box shadow">
+                            <p>
+                                <h5>Upload a material of your course for your students.</h5>
+                                <p class="font-weight-light">(<b>PS:</b>Please have the file name as the Chapter/Title of the material.)</p>
+                            </p>
+                            <br>
+                            <input type="file" name="upfile" multiple="multiple">
+                            <button type="button" class="btn btn-primary btn-md" id="unext">Next</button>
+                            <div id="uerror"></div>
+                            <br><br>
+                            <div id="uspfcls" style="display: none">
+                                <b>To:</b>
+                                <br>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <label><b>Branch:</b></label><br>
+                                        <select id="uspfbr" class="custom-select" name="ubrtosnd">
+                                            <option selected>Branch</option>
+                                            <option value="CSE">CSE</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-4">
+                                        <label><b>Year:</b></label><br>
+                                        <select id="uspfyr" class="custom-select" name="uyeartosend">
+                                            <option selected>Year</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-4">
+                                        <label><b>Section:</b></label><br>
+                                        <select id="uspfsc" class="custom-select" name="uclstosnd">
+                                            <option selected>Section</option>
+                                            <option value="A">A</option>
+                                            <option value="B">B</option>
+                                            <option value="C">C</option>
+                                            <option value="D">D</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <label><b>Subject:</b></label><br>
+                                        <select id="subhan" class="custom-select" name="subhan">
+                                            <option selected>Subject</option>
+                                            <option value="Theory of Computation">Theory of Computation</option>
+                                            <option value="B">B</option>
+                                            <option value="C">C</option>
+                                            <option value="D">D</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <button type="button" class="btn btn-outline-success" id="usend">Send</button>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <button type="button" class="btn btn-outline-danger" id="ucancel">Cancel</button>
+                                    </div>
+                                </div><br>
+                                <div class="alertup alert-success alert-dismissible fade show" style="display: none;" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <strong>Files Uploaded Successfully!</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="message-box shadow">
+                            <p>
+                                <h5>View All Your Uploaded Files</h5>
+                            </p>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <button type="button" class="btn btn-primary" id="uview">View</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class=" message-box shadow">
+                            <p>
+                                <h5>View All The Students' Uploaded Files For Your Assignments</h5>
+                            </p>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <button type="button" class="btn btn-primary" id="uasgn">View</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

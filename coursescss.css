@@ -1,0 +1,19 @@
+.su {
+    background-color: rgb(255, 255, 255);
+    min-width: 70px;
+    height: 150px;
+    padding: 60px;
+    text-align: center;
+    border: 1px solid black;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    transition: .2s;
+}
+
+.su:hover {
+    -webkit-box-shadow: -1px 4px 26px 0px rgba(0, 0, 0, 0.54);
+    -moz-box-shadow: -1px 4px 26px 0px rgba(0, 0, 0, 0.54);
+    box-shadow: -1px 3px 15px 0px rgba(0, 0, 0, 0.54);
+}

@@ -1,0 +1,100 @@
+.assignment {
+    position: relative;
+    height: 250px;
+    width: 1000px;
+    margin-top: 15px;
+    transition: .4s;
+    border-left: 2px solid green;
+}
+
+.assign {
+    position: absolute;
+    margin-left: 100px;
+    margin-top: 50px;
+    color: rgb(78, 76, 76);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+}
+
+.assignment img {
+    position: relative;
+    top: -30px;
+    left: 600px;
+    width: 200px;
+    height: 300px;
+}
+
+.assignment .do {
+    position: relative;
+    top: 25px;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: black;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);
+}
+
+.do:hover {
+    background-position: right center;
+}
+
+.assignment:hover {
+    transform: scale(1.001);
+    -webkit-box-shadow: -1px 6px 26px 0px rgba(0, 0, 0, 0.54);
+    -moz-box-shadow: -1px 6px 26px 0px rgba(0, 0, 0, 0.54);
+    box-shadow: -1px 6px 26px 0px rgba(0, 0, 0, 0.54);
+}
+
+.comat {
+    position: relative;
+    height: 250px;
+    width: 1000px;
+    margin-top: 50px;
+    transition: .4s;
+    border-left: 2px solid green;
+}
+
+.mate {
+    position: absolute;
+    margin-left: 600px;
+    margin-top: 50px;
+    color: rgb(78, 76, 76);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+}
+
+.comat img {
+    position: relative;
+    top: 0px;
+    left: 100px;
+    width: 250px;
+    height: 250px;
+}
+
+.comat .do {
+    position: relative;
+    top: -110px;
+    padding: 15px;
+    margin-left: 670px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: black;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);
+}
+
+.comat .do:hover {
+    background-position: right center;
+}
+
+.comat:hover {
+    transform: scale(1.001);
+    -webkit-box-shadow: -1px 6px 26px 0px rgba(0, 0, 0, 0.54);
+    -moz-box-shadow: -1px 6px 26px 0px rgba(0, 0, 0, 0.54);
+    box-shadow: -1px 6px 26px 0px rgba(0, 0, 0, 0.54);
+}

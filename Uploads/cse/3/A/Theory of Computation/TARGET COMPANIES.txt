@@ -1,0 +1,56 @@
+INFORMATICA-11L 
+Result: No
+
+ZOZHO-6.5L -
+Result:
+
+SIRIUS-6L
+Result: 
+
+CODA GLOBAL-9L
+Result:
+
+HONEYWELL-5L
+Result:
+
+ZOOMRX-6L
+Result:
+
+Mr COOPER-7.5L
+Result:
+
+XORIANT-4.6L
+Result:
+
+DELTAX-5L
+Result:
+
+TRIMBLE-5L
+Result:
+
+INFOGAIN-6L
+Result:
+
+CODE BRAHMA-5.5L
+Result:
+
+VURAM-4.5L
+Result:
+
+GBOXZ-4.5L
+Result:
+
+ESSDI-4.8L
+Result:
+
+KAAR TECHNOLOGIES-7L
+Result:
+
+VOLANTE TECHNOLOGIES-5L
+Result:
+
+SAINT GOBAIN-6.3L
+Result:
+
+WORKSBOT-5L
+Result:

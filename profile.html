@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Classus-Profile</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/098ee03ef1.js"></script>
+    <link rel="stylesheet" href="profilecss.css">
+    <script type="text/javascript" src="profilejs.js"></script>
+
+    <body>
+        <div class="sidenav">
+            <h1>Profile</h1>
+            <a id="per" class="item" href="#">Personal</a>
+            <a id="aca" class="item" href="#">Academics</a>
+            <a id="cocur" class="item" href="#">Co-Curricular</a>
+            <a id="excur" class="item" href="#">Extra-Curricular</a>
+        </div>
+        <div class="content">
+            <div id="pro-pic" class="rounded-circle text-center">
+                <div id="pic" class="inner1"></div>
+                <div id="in" class="inner">
+                    <div id="reg" class="inner"></div>
+                    <div id="dep" class="inner"></div>
+                    <div id="cgpa" class="inner"></div>
+                    <div id="name" class="inner"></div>
+                </div>
+            </div>
+            <div id="per-det" class="details">
+                <h4 class="display-4 text-center">Personal Details</h4>
+                <table class="table-responsive table-borderless ">
+                    <tr>
+                        <td><b>Name</b></td>
+                        <td id="sname"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Register Number</b></td>
+                        <td id="sre"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Branch</b></td>
+                        <td id="sbr"></td>
+                    </tr>
+                    <tr>
+                        <td><b>College Current Year</b></td>
+                        <td id="cy"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Section</b></td>
+                        <td id="sec"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Date Of Birth</b></td>
+                        <td id="sdob"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Age</b></td>
+                        <td id="sage"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Gender</b></td>
+                        <td id="sgen"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Father's Name</b></td>
+                        <td id="sfan"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Father's Occupation</b></td>
+                        <td id="sfao"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Address</b></td>
+                        <td id="sadd"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Phone Number</b></td>
+                        <td id="spho"></td>
+                    </tr>
+                    <tr>
+                        <td><b>E-Mail</b></td>
+                        <td id="sema"></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="aca-det" class="details">
+                <h4 class="display-4 text-center">Academic Details</h4>
+                <table class="table-responsive table-borderless ">
+                    <tr>
+                        <td><b>10<sup>th</sup></b></td>
+                        <td id="0sc"></td>
+                    </tr>
+                    <tr>
+                        <td><b>10<sup>th</sup> School Name</b></td>
+                        <td id="0sn"></td>
+                    </tr>
+                    <tr>
+                        <td><b>12<sup>th</sup></b></td>
+                        <td id="2sc"></td>
+                    </tr>
+                    <tr>
+                        <td><b>12<sup>th</sup> School Name</b></td>
+                        <td id="2sn"></td>
+                    </tr>
+
+                    <tr>
+                        <td><b>UG 1<sup>st</sup> Sem GPA</b></td>
+                        <td id="ug1"></td>
+                    </tr>
+                    <tr>
+                        <td><b>UG 2<sup>nd</sup> Sem GPA</b></td>
+                        <td id="ug2"></td>
+                    </tr>
+                    <tr>
+                        <td><b>UG 3<sup>rd</sup> Sem GPA</b></td>
+                        <td id="ug3"></td>
+                    </tr>
+                    <tr>
+                        <td><b>UG 4<sup>th</sup> Sem GPA</b></td>
+                        <td id="ug4"></td>
+                    </tr>
+                    <tr>
+                        <td><b>UG 5<sup>th</sup> Sem GPA</b></td>
+                        <td id="ug5"></td>
+                    </tr>
+                    <tr>
+                        <td><b>UG 6<sup>th</sup> Sem GPA</b></td>
+                        <td id="ug6"></td>
+                    </tr>
+                    <tr>
+                        <td><b>UG 7<sup>th</sup> Sem GPA</b></td>
+                        <td id="ug7"></td>
+                    </tr>
+                    <tr>
+                        <td><b>UG 8<sup>th</sup> Sem GPA</b></td>
+                        <td id="ug8"></td>
+                    </tr>
+                    <tr>
+                        <td><b>UG CGPA</b></td>
+                        <td id="scgpa"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Additional Courses Done</b></td>
+                        <td id="addc"></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="co-det" class="details">
+                <h4 class="display-4 text-center">Co-Curricular Details</h4>
+                <table class="table-responsive table-borderless ">
+                    <tr>
+                        <td><b>Papers Presented</b></td>
+                        <td id="ppp"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Projects Presented</b></td>
+                        <td id="prp"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Papers Won</b></td>
+                        <td id="ppw"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Projects Won</b></td>
+                        <td id="prw"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Workshops Attended</b></td>
+                        <td id="wra"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Implant Trainings Attended</b></td>
+                        <td id="imp"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Internships</b></td>
+                        <td id="inte"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Member Of Clubs</b></td>
+                        <td id="mc"></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="ex-det" class="details">
+                <h4 class="display-4 text-center">Extra-Curricular Details</h4>
+                <table class="table-responsive table-borderless ">
+                    <tr>
+                        <td><b>Sports Interested In</b></td>
+                        <td id="ssi"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Sports Achievements</b></td>
+                        <td id="ssa"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Performed On Stage In</b></td>
+                        <td id="pon"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Talent Achievements</b></td>
+                        <td id="tac"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Volunteered In</b></td>
+                        <td id="vin"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Personal Projects/Works</b></td>
+                        <td id="perpro"></td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </body>
+
+</html>
